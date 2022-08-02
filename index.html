@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 data-text="Data_science">0100111001110010</h2>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        *
+        {
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #191919;
+        }
+        h2
+        {
+            position: relative;
+            font-size: 5vw;
+            color: #252839;
+            -webkit-text-stroke: 0.5vw #383d52;
+            text-transform: uppercase;
+        }
+        h2::before
+        {
+            content: attr(data-text);
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width:  0%;
+            height: 100%;
+            color: #01fe87;
+            -webkit-text-stroke: 0vw #383d52;
+            border-right: 2px solid #01fe87;
+            overflow: hidden;
+            animation: animate 6s linear infinite;
+            background-color: #191919;
+        }
+        @keyframes animate
+        {
+            0%,10%,100%
+            {
+                width: 0;
+            }
+            70%,90%
+            {
+                width: 100%;
+            }
+        }
+    </style>
+</body>
+</html>
